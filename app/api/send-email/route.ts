@@ -509,18 +509,18 @@ export async function POST(request: Request) {
     await transporter.verify()
     
     let htmlTemplate = null
-    console.log("--------------------------------")
+   
     if(smtpKey === "jolo bbmk tvhv tmrr") {
-      console.log("Enviando email con template de dani")
+    
       htmlTemplate = getEmailTemplate2(companyField, messageField, fullName, workstation, senderEmail, location, phone, linkedin, jobInfo, educationLevel, experienceLevel)
     }else{
-      console.log("Enviando email con template general")
+    
       htmlTemplate = getEmailTemplate(companyField, messageField, fullName, workstation, senderEmail, location, phone, linkedin, jobInfo, educationLevel, experienceLevel)
     }
 
     // 5) Enviamos el correo
     const info = await transporter.sendMail({
-      from: `"${fullName}" <${process.env.SMTP_USER}>`,
+      from: `"${fullName}" <${senderEmail}>`,
       to: emailField,
       subject: `Candidatura ${workstation} ${experienceLevel} – ${companyField}`,
       html: htmlTemplate,
