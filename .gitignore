@@ -1,0 +1,52 @@
+# Dependencias
+/node_modules/
+
+# Archivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Entorno
+.env
+.env.local
+.env.*.local
+
+# Build output de Next.js
+/.next/
+/out/
+
+# Cachés de compilación
+/.cache/
+/npm-packages-offline-cache/
+
+# Coverage (si usas Jest u otras herramientas)
+/coverage/
+
+# Editor específico (VSCode, IntelliJ, etc.)
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Macros de sistema
+*.swp
+*~
+
+# Archivos de lock generados por package managers alternativos
+.pnpm-debug.log*
+.pnpm/
+
+# Export de build estático (opcional)
+/out/
+
+# TipoScript (si usas)
+/*.tsbuildinfo
+
+# Storybook (si lo usas)
+/storybook-static/
+
+# Otros (si usas Husky, Lerna, etc.)
+.husky/_/
+/lerna-debug.log
